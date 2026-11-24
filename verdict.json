@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "run_id": "2026-11-24T11:52:53+01:00_4ad73aa8",
+  "samenvatting": "De oorzaak van de Desync is niet bewezen. De hulpslag (ENG-011, dag 10, 02:40) is de enige technische wijziging in de logs die vlak voor de eerste verstoring ligt, maar het tijdstip is niet onafhankelijk bevestigd en het causale verband is niet aangetoond. Het eerste schildincident in de bronnen van de Guardian Keeper is GUA-019 (dag 10, 04:47), en de eerste klacht uit de benedenstad is ENG-107 (dag 10, 04:50). Beide tijdstempels op dag 10 en dag 22 zijn volgens de Historian en de Guardian Keeper niet betrouwbaar gebleken: HIS-036 en HIS-053 breken de eigen regel HIS-103, en de melding van 01:50 op dag 22 ontbreekt in de wachtrapporten. Het ritme van de zware nachten (elke vierde dag, rond 04:15 tot 04:50, vanaf dag 10) wordt door de Beast Master en de Oracle onafhankelijk gezien, maar de oorzaak ervan is niet vastgesteld. De Raadsleden zijn het eens dat eerst de tijdbronnen en de originele banden moeten worden nagelezen voordat er aan de polsen of de hulpslag iets verandert.",
+  "oorzaak": {
+    "ingreep": {
+      "bewering": "Waarschijnlijk de hulpslagactivatie (ENG-011) op dag 10 om 02:40, die een eigen datanetpuls instelde los van de Kroonklok. Het tijdstip is niet onafhankelijk bevestigd.",
+      "bewijs": [
+        "ENG-011",
+        "ENG-012",
+        "ENG-106",
+        "ENG-107",
+        "HIS-036"
+      ],
+      "zekerheid": 0.35
+    },
+    "mechanisme": {
+      "bewering": "Hypothese: het datanet met een eigen pols loopt op een ander tempo dan de Kroonklok. Daardoor kan verkeer midden tussen twee tikken aankomen, waarna Art. 3 het schild van binnenuit laat openen. Het tempo is in de logs niet gewijzigd, dus dit is nog niet getoetst.",
+      "bewijs": [
+        "GUA-104",
+        "GUA-019",
+        "ENG-103",
+        "ENG-102",
+        "ENG-061",
+        "ENG-114",
+        "HIS-109",
+        "HIS-110"
+      ],
+      "zekerheid": 0.25
+    },
+    "verloop": {
+      "bewering": "Het patroon toont zware nachten rond 04:15 tot 04:50 op dag 10, 14, 18, 22, 26, 30, 34, 38 en 42. De eerste zware nacht volgt op de activatie, maar er is geen meting tussen 02:40 en 04:40 op dag 10. Bovendien zijn de schildopeningen op dag 10 (GUA-019) en dag 22 (GUA-043) van binnenuit en met intacte zegels.",
+      "bewijs": [
+        "BEA-019",
+        "BEA-020",
+        "BEA-046",
+        "BEA-091",
+        "BEA-113",
+        "ORA-110",
+        "ORA-122",
+        "ORA-142",
+        "GUA-043",
+        "GUA-044"
+      ],
+      "zekerheid": 0.5
+    }
+  },
+  "acties": [
+    {
+      "actie": "Maak eerst een afschrift van het volledige register, voordat er aan de polsen of aan de hulpslag iets wordt veranderd.",
+      "reden": "HIS-110 schrijft dit voor: een record op een andere pols is alleen op die pols terug te lezen, en bij het wegvallen van een pols gaat het verloren.",
+      "bewijs": [
+        "HIS-109",
+        "HIS-110"
+      ]
+    },
+    {
+      "actie": "Lees de originele stempels van HIS-035, HIS-036, HIS-053 en HIS-054 na in de oude band in de noordvleugel.",
+      "reden": "Deze vier records breken de regel HIS-103 (vastgelegd is gelijk aan gebeurd). Klerken merkten dit al op in HIS-112 en HIS-116, zonder de band na te lezen.",
+      "bewijs": [
+        "HIS-035",
+        "HIS-036",
+        "HIS-053",
+        "HIS-054",
+        "HIS-103",
+        "HIS-112",
+        "HIS-116",
+        "HIS-120"
+      ]
+    },
+    {
+      "actie": "Vraag het originele wachtboek op voor de nachten van dag 10 en dag 22, inclusief de melding van 01:50 en de klokbron van de tijdkolom.",
+      "reden": "De melding van 01:50 staat niet in de CSV van de wachtrapporten, en de tijdkolom heeft geen vastgelegde bron. GUA-115 heeft de melding afgedaan als klerkenfout zonder onderbouwing.",
+      "bewijs": [
+        "GUA-115",
+        "GUA-108",
+        "GUA-106",
+        "HIS-053"
+      ]
+    },
+    {
+      "actie": "Vraag de klokkenmeester of er ooit een klokafwijking of hertijdsynchronisatie is geweest, en leg de tiktijden en het tikinterval van de Kroonklok vast.",
+      "reden": "Geen van de Raadsleden heeft tiktijden of een tikinterval in de bronnen. Zonder die gegevens kan Art. 3 niet worden getoetst.",
+      "bewijs": [
+        "GUA-103",
+        "GUA-104",
+        "HIS-103"
+      ]
+    },
+    {
+      "actie": "Bepaal de tijdbron van de installatielog en het werkboek, en vergelijk de hulpslagpulsen met de tijden van de schildopeningen.",
+      "reden": "ENG-011 heeft geen metadata over invoertijd, en ENG-106 is na 03:00 geschreven. Zonder vaste tijdbron kan de volgorde van activatie en schildopening niet worden vastgesteld.",
+      "bewijs": [
+        "ENG-011",
+        "ENG-012",
+        "ENG-106",
+        "ENG-107",
+        "GUA-019",
+        "GUA-043"
+      ]
+    },
+    {
+      "actie": "Toets het tempo van de hulpslag tegen de Kroonklok, met behoud van de doorvoerwinst.",
+      "reden": "De hypothese van een tempoverschil is toetsbaar, maar het tempo is nooit afgestemd op de Kroonklok. De doorvoerwinst van ENG-012 moet blijven bestaan.",
+      "bewijs": [
+        "ENG-061",
+        "ENG-062",
+        "ENG-103",
+        "ENG-114",
+        "ENG-012"
+      ]
+    },
+    {
+      "actie": "Stel vast wie de mannen bij de oude eik op dag 3 om 08:30 waren en welke dikke zwarte kabels op dag 27 tussen de wortels liggen.",
+      "reden": "ENG-003 en HIS-014 bevestigen een inspectie op dag 3 maar geen verlegging. Er is geen record van kabels geplaatst na dag 3, en de Engineer kan de kabels van BEA-115 niet verklaren.",
+      "bewijs": [
+        "BEA-102",
+        "BEA-115",
+        "ENG-003",
+        "ENG-108",
+        "HIS-014",
+        "HIS-007"
+      ]
+    },
+    {
+      "actie": "Voer een leylijnmeting uit tussen dag 7 en dag 14, en leg de meting van dag 10 vast.",
+      "reden": "Er is geen meting in het gat tussen dag 7 en dag 14, dus het begin van de verstoring in de leylijnen kan niet worden gedateerd. Dag 14 en dag 42 laten lage waarden zien die niet verklaard zijn.",
+      "bewijs": [
+        "ARC-001",
+        "ARC-014",
+        "ARC-015",
+        "ARC-028",
+        "ARC-071",
+        "ARC-084",
+        "ARC-105"
+      ]
+    }
+  ],
+  "risicos": [
+    {
+      "risico": "Het register of de polsen worden samengebracht zonder vooraf afschrift, waardoor records verloren gaan.",
+      "mitigatie": "Maak eerst een volledig afschrift van het register en breng de polsen daarna langzaam samen, zoals HIS-110 voorschrijft."
+    },
+    {
+      "risico": "De tijdstempels van de logs zijn onbetrouwbaar, waardoor de volgorde van oorzaak en gevolg verkeerd wordt vastgesteld.",
+      "mitigatie": "Lees eerst de originele banden en het wachtboek na, en neem geen conclusie over de volgorde voordat die tijdstempels zijn bevestigd."
+    },
+    {
+      "risico": "Schilden blijven van binnenuit opengaan, omdat Art. 3 verkeer zonder toets doorlaat wanneer het midden tussen twee tikken aankomt.",
+      "mitigatie": "Houd de wachtposten bemand en de zegelcontroles actief, ook in het venster van 03:00 tot 06:00 waarin geen rondes lopen."
+    },
+    {
+      "risico": "Het verband tussen hulpslag en verstoring wordt bevestigd of ontkend op basis van een hypothese die nog niet getoetst is.",
+      "mitigatie": "Behandel ENG-011 als kandidaat-oorzaak en niet als bewezen oorzaak, tot het tempo- en tijdonderzoek is afgerond."
+    },
+    {
+      "risico": "Onbekende kabels in het woud blijven ongeverifieerd, met mogelijke invloed op de dieren en het datanet.",
+      "mitigatie": "Vraag de Engineer en de datatoren om de identiteit en de installatiedatum van de kabels van BEA-115 en de mannen van BEA-102 vast te leggen."
+    },
+    {
+      "risico": "Het ritme van de zware nachten zet zich voort zonder dat er een oorzaak is gevonden.",
+      "mitigatie": "Plan waarnemingen rond 04:00 tot 05:00 op de verwachte dagen en leg de uitkomst vast in het gedeelde register."
+    }
+  ],
+  "voorspelling": {
+    "dag": 46,
+    "bewering": "Als het ritme aanhoudt, treedt de volgende zware nacht op rond dag 46, tussen 04:15 en 04:45. Dit is een extrapolatie uit negen nachten, geen zekerheid.",
+    "bewijs": [
+      "ORA-130",
+      "ORA-142",
+      "BEA-091",
+      "BEA-113"
+    ]
+  }
+}

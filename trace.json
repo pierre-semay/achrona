@@ -1,0 +1,283 @@
+{
+  "run_id": "2026-11-24T11:52:53+01:00_4ad73aa8",
+  "status": "klaar",
+  "raadsleden": [
+    "archmage",
+    "beast_master",
+    "engineer",
+    "guardian_keeper",
+    "historian",
+    "oracle"
+  ],
+  "beurten": [
+    {
+      "nr": 1,
+      "ronde": 0,
+      "spreker": "archmage",
+      "soort": "bestand",
+      "bestand": "archmage/brieven.md"
+    },
+    {
+      "nr": 2,
+      "ronde": 0,
+      "spreker": "archmage",
+      "soort": "bestand",
+      "bestand": "archmage/leylijnmetingen.csv"
+    },
+    {
+      "nr": 3,
+      "ronde": 0,
+      "spreker": "beast_master",
+      "soort": "bestand",
+      "bestand": "beast_master/logboek.csv"
+    },
+    {
+      "nr": 4,
+      "ronde": 0,
+      "spreker": "beast_master",
+      "soort": "bestand",
+      "bestand": "beast_master/veldnotities.md"
+    },
+    {
+      "nr": 5,
+      "ronde": 0,
+      "spreker": "engineer",
+      "soort": "bestand",
+      "bestand": "engineer/installatielog.csv"
+    },
+    {
+      "nr": 6,
+      "ronde": 0,
+      "spreker": "engineer",
+      "soort": "bestand",
+      "bestand": "engineer/werkboek.md"
+    },
+    {
+      "nr": 7,
+      "ronde": 0,
+      "spreker": "guardian_keeper",
+      "soort": "bestand",
+      "bestand": "guardian_keeper/schildspecificatie.md"
+    },
+    {
+      "nr": 8,
+      "ronde": 0,
+      "spreker": "guardian_keeper",
+      "soort": "bestand",
+      "bestand": "guardian_keeper/wachtrapporten.csv"
+    },
+    {
+      "nr": 9,
+      "ronde": 0,
+      "spreker": "historian",
+      "soort": "bestand",
+      "bestand": "historian/archiefrecords.csv"
+    },
+    {
+      "nr": 10,
+      "ronde": 0,
+      "spreker": "historian",
+      "soort": "bestand",
+      "bestand": "historian/kroniek.md"
+    },
+    {
+      "nr": 11,
+      "ronde": 0,
+      "spreker": "oracle",
+      "soort": "bestand",
+      "bestand": "oracle/visioenendagboek.md"
+    },
+    {
+      "nr": 12,
+      "ronde": 1,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "engineer",
+      "vraag": "Welke technische wijziging of installatie staat in je log op het moment dat de Desync begon, en welke stap in je werkboek hoort daarbij? Geef ook aan of die wijziging vóór of na de verstoring van de dieren en de schilden plaatsvond.",
+      "reden": "Alle leden hebben al één ronde gesproken, maar we hebben nog geen concrete technische oorzaak met een tijdlijn. De Engineer kan de Desync koppelen aan een specifieke wijziging, en de vraag naar de volgorde helpt de andere perspectieven (dieren, schilden) te toetsen."
+    },
+    {
+      "nr": 13,
+      "ronde": 1,
+      "spreker": "engineer",
+      "soort": "bericht",
+      "tekst": "**Het moment waarop de Desync begon**\n\nOp dag 10 om 02:40 is de hulpslag geactiveerd (**ENG-011**). Die activatie is de technische wijziging die in mijn log op dat moment staat. Het werkboek beschrijft die stap in **[ENG-106]**, dag 10. Het ontwerp dat eraan voorafging staat in **[ENG-103]** (dag 4), en de proefopstelling in de kelder in **ENG-010** (dag 9). De eerste meting na activatie, +38% doorvoer, staat in **ENG-012** om 03:00. Om 04:50 kwam de eerste klacht uit de benedenstad over berichten die \"half aangekomen\" waren; dat staat alleen in het werkboek, **[ENG-107]**, en niet in de installatielog.\n\n**Vóór of na de dieren en de schilden**\n\n- **De dieren:** Ik heb in de logs geen wijziging aan de woudkabels gevonden. De woudkabels zijn op dag 3 geïnspecteerd (**ENG-003**), en de werkboekentry **[ENG-108]** (dag 15) zegt dat er niets is veranderd. De klacht van de Beast Master kwam dus na de activatie, maar er is geen installatie in het woud die dat kan verklaren.\n- **De schilden:** Het pakketverlies op poort oost is van dag 22 om 04:15 (**ENG-026**). Daarna kwamen de aangescherpte firewallregels (**ENG-027**) en de bijbehorende uitleg in **[ENG-110]**. Dat is dus na de activatie. Ook hier zie ik in mijn log geen andere wijziging die dit verklaart.\n\n**Wat ik wel en niet kan zeggen**\n\nDe hulpslag is de enige installatie in mijn log die vlak vóór de eerste klachten plaatsvond, en de enige die samenvalt met het begin van de verstoring. Ik kan echter niet bewijzen dat de activatie de oorzaak is. De woudkabels en de firewall komen na de activatie, maar die volgorde alleen bewijst niets. Ook de signaalmastlamp die op dag 3 gedimd werd (**ENG-071**) ligt vóór de activatie. Ik zie geen verband met de Desync, maar ik sluit het ook niet uit als iemand anders die wel ziet."
+    },
+    {
+      "nr": 14,
+      "ronde": 1,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "guardian_keeper",
+      "vraag": "De Engineer stelt dat het eerste pakketverlies op poort oost pas op dag 22 om 04:15 optrad (ENG-026), dus ruim na de activatie van de hulpslag op dag 10 (ENG-011). Klopt dat met je wachtrapporten en schildspecificatie? Zijn er vóór dag 10 al waarschuwingen, dimmingen of mislukte schildcontroles geweest, en welke bron-ID's bevestigen of weerspreken het tijdstip van de eerste schildfout?",
+      "reden": "De Engineer heeft de hulpslag als enige kandidaat-oorzaak aangewezen, maar baseert de volgorde op het pakketverlies van dag 22. Als de schilden al eerder faalden, verandert dat de tijdlijn en de geloofwaardigheid van de hulpslag als oorzaak. Alleen de Guardian Keeper kan de wachtrapporten en de schildspecificatie tegen die tijdlijn houden."
+    },
+    {
+      "nr": 15,
+      "ronde": 1,
+      "spreker": "guardian_keeper",
+      "soort": "bericht",
+      "tekst": "**Guardian Keeper:** Ik antwoord alleen vanuit mijn schildspecificatie en wachtrapporten. Ik heb geen toegang tot de ENG-records en kan die dus niet controleren.\n\n**Wat mijn bronnen zeggen over vóór dag 10**\n\n- Ik vind geen waarschuwingen, dimmingen of mislukte schildcontroles vóór dag 10. Ik heb geen dimming-records in mijn bronnen, dus de signaalmastlamp uit jouw bericht kan ik niet bevestigen of weerspreken.\n- De zegelcontroles vóór dag 10 zijn allemaal intact: GUA-014 (dag 7, alle zes schilden), GUA-018 (dag 9, benedenstad) en GUA-030 (dag 15, poort zuid, hier al na dag 10). Ook GUA-044 en GUA-066 bevestigen intacte zegels, maar die liggen na dag 10.\n- De routinewachten van dag 1 tot 9 (GUA-001 tot GUA-009) melden allemaal \"rustig\" of \"in orde\". Er staat niets over een schildfout.\n\n**Het eerste schildincident in mijn records**\n\nHet eerste incident in mijn bronnen is **GUA-019**: dag 10, 04:47, schild benedenstad, \"van binnenuit geopend, 2 minuten\", met de vaststelling \"zegels intact, geen breuk, oorzaak niet vastgesteld\". De notitie daarbij is **[GUA-111]** (dag 10), waarin ik het \"kort\" en \"geen reden tot ongerustheid\" noemde. Dat was een verkeerde inschatting. Ik had moeten vaststellen dat de oorzaak onbekend was en dat dit onderzocht moest worden.\n\nDit verschilt van de datum die de Engineer noemt: volgens de Engineer was de eerste fout op poort oost op dag 22, en volgens mijn records was het op dag 10 bij benedenstad. Ik ken alleen mijn eigen meting: een schild dat van binnenuit opende. Ik meet geen pakketverlies, en de Engineer doet dat wel. Over pakketverlies kan ik dus niets zeggen.\n\n**Poort oost op dag 22**\n\n- **GUA-043** (dag 22, 04:15): poort oost \"van binnenuit geopend, 3 minuten\", met de vaststelling \"geen sporen van inbraak van buitenaf\".\n- **GUA-044** (dag 22, 04:30): zegels intact, niemand buiten de muur gezien.\n- **[GUA-115]**: de toren beweerde hackers, maar de zegels waren intact. Er staat ook dat het archief de melding van de wachters op 01:50 inschreef, meer dan twee uur vóór de opening om 04:15. Ik heb dat toen weggeschreven als \"slordigheid van de klerken\". Dat was te snel. Een melding die vóór het incident is ingeschreven, verdient een verklaring.\n\n**Wat ik wel en niet kan zeggen**\n\n- Mijn bronnen bevestigen dat het schild op dag 10 en dag 22 van binnenuit opende, terwijl de zegels intact waren. Dat wijst niet op inbraak van buitenaf.\n- Volgens **Art. 3** (GUA-104) opent een schild van binnenuit als verkeer midden tussen twee tikken van de Kroonklok aankomt. Dat is ontworpen gedrag. Het verklaart dus niet waarom het op die twee momenten gebeurde.\n- Ik weet niet wat de oorzaak is. Ik ken ook het tijdstip van de hulpslagactivatie niet uit mijn bronnen. De Engineer noemt 02:40 op dag 10. Mijn eerste incident is 04:47 op dag 10. Dat past in de volgorde die de Engineer beschrijft, maar ik kan dat niet bevestigen.\n\n**Vraag aan de Engineer**\n\nKun je in de ENG-records bevestigen of de hulpslag op dag 10 inderdaad om 02:40 is geactiveerd? En hoe verklaart jouw log dat het eerste schildincident in mijn bronnen (GUA-019, 04:47) pas twee uur later optrad?"
+    },
+    {
+      "nr": 16,
+      "ronde": 1,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "beast_master",
+      "vraag": "Wanneer merkte je de eerste onrust onder de dieren van het woud, en hoe verhoudt die datum en tijd zich tot de activatie van de hulpslag op dag 10 om 02:40 (ENG-011) en tot het eerste schildincident op dag 10 om 04:47 (GUA-019)? Geef de bron-ID's die dat tijdstip bevestigen of weerspreken, en zeg ook of je onrust in het woud vóór dag 10 al zag.",
+      "reden": "De Engineer stelt dat er in het woud geen installatie is gewijzigd en dat de klacht van de Beast Master ná de activatie kwam, maar heeft de dierentijdlijn niet zelf getoetst. De Guardian Keeper en de Engineer spreken elkaar tegen over de volgorde (dag 10 versus dag 22). De Beast Master is de enige die een vroege, niet-technische indicator van de Desync kan leveren, en die kan bepalen of de verstoring op dag 10 of eerder begon."
+    },
+    {
+      "nr": 17,
+      "ronde": 1,
+      "spreker": "beast_master",
+      "soort": "bericht",
+      "tekst": "**Beast Master:** Ik antwoord alleen vanuit mijn logboek (BEA-xxx) en mijn veldnotities ([BEA-101] tot [BEA-121]). De ENG- en GUA-records ken ik niet, dus die bevestig of weerspreek ik niet.\n\n**1. Mijn eerste sterke onrust: dag 10, nacht**\n\nHet eerste dier met onrust 4 of hoger in mijn logboek is **BEA-019** (dag 10, 04:40, wolf, diep woud): \"roedel slaat tegelijk aan; huilt tot het licht wordt\". Daarna volgt **BEA-020** (dag 10, 04:50, hert, diep woud): \"kudde vlucht van de open plek\". Mijn veldnotitie **[BEA-106]** beschrijft dezelfde nacht. Ik sliep bij de omgevallen den en was er \"nooit eerder zo\".\n\nVóór dag 10 haalt geen enkel record in dag 1 tot 9 een onrust van 3 of hoger. Het hoogste is 2, in **BEA-018** (dag 9, 13:30, uil, oude vijver): \"fladdert op toen ik onder de boom doorliep\". Dat gebeurde terwijl ik er zelf langs liep.\n\n**2. Verhouding tot de hulpslag (ENG-011, dag 10, 02:40)**\n\nIk kan de tijd 02:40 niet bevestigen of weerspreken. Mijn logboek heeft voor dag 10 niets tussen 02:40 en 04:40. In **[BEA-106]** schrijf ik dat ik die nacht wakker lag en \"zonder dat ik iets zag of rook\" de wolven om 04:40 hoorde. Ik kan dus niet zeggen of de onrust al vóór 04:40 begon. Als 02:40 klopt, is er in mijn bronnen twee uur niets vastgelegd.\n\n**3. Verhouding tot het eerste schildincident (GUA-019, dag 10, 04:47)**\n\nVolgens de tekst van de Guardian Keeper komt GUA-019 zeven minuten na **BEA-019**. Ik kan GUA-019 zelf niet controleren. Het is wel het enige tijdstip in mijn bronnen dat binnen minuten bij de eerste grote onrust past. Dat is geen bewijs van een oorzaak. Het zijn twee waarnemingen in dezelfde nacht.\n\n**4. Milde signalen vóór dag 10**\n\nIk zag wel onrust vóór dag 10, maar die was klein en lijkt gewoon:\n- **BEA-005** (dag 3, 08:40, kraai, oude eik, 1): \"even opgevlogen bij volk onder de boom\". Dit gebeurde tien minuten nadat de mannen uit de toren om 08:30 bij de kabels aan de oude eik stonden, zoals ik beschreef in **[BEA-102]**. Ik kan niet zeggen of dat verband houdt.\n- **BEA-015** (dag 8, 00:20, wolf, heuvel, 1): \"huilt één keer in de verte\".\n- **BEA-018** (dag 9, 13:30, uil, oude vijver, 2): zie hierboven.\n\n**5. Patroon na dag 10**\n\nDe zwaarste nachten (onrust 4 of 5) vallen steeds rond dag 10, 14, 18, 22, 26, 30, 34, 38 en 42, telkens rond 04:15 tot 04:50. Dat zijn **BEA-019/020**, **BEA-028/029**, **BEA-037/038**, **BEA-046/047**, **BEA-055/056**, **BEA-064/065**, **BEA-073/074**, **BEA-082/083** en **BEA-091/092**. In **[BEA-113]** schrijf ik: \"Elke vierde nacht hetzelfde, sinds dag 10.\" Dag 22 om 04:15 (**BEA-046**, wolf, diep woud, onrust 4) valt op dezelfde minuut als het pakketverlies dat de Engineer in ENG-026 noemt. Dat is alleen een gelijk tijdstip. Ik weet niet wat het betekent.\n\n**Vragen aan de Engineer**\n\n- Was het bezoek van de mannen aan de kabels bij de oude eik op dag 3 om 08:30 (**[BEA-102]**) hetzelfde als de inspectie in ENG-003? Die ENG-003 zegt dat er niets veranderd is. Ik zag wel mannen met ladders en gereedschap, maar ik weet niet wat ze deden.\n- In **[BEA-115]** (dag 27) zag ik zelf dikke zwarte kabels tussen de wortels van de oude eik. Welke kabels zijn dat, en is er in ENG-records iets over woudkabels geplaatst na dag 3?\n- Staat er in ENG-records iets voor dag 10, tussen 02:40 en 04:40? Dat is het gat in mijn waarnemingen."
+    },
+    {
+      "nr": 18,
+      "ronde": 1,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "archmage",
+      "vraag": "Welke spreuken, rituele ingrepen of wijzigingen in de leylijnen zijn er op dag 10 uitgevoerd, en in het bijzonder rond 02:40 (de hulpslagactivatie ENG-011) en tussen 02:40 en 04:47 (het eerste schildincident GUA-019)? Zijn er in je leylijnmetingen veranderingen te zien in die periode, en welke bron-ID's bevestigen of weerspreken dat? Zeg ook of je vóór dag 10 al afwijkende metingen zag.",
+      "reden": "De Engineer wijst de hulpslag aan als enige kandidaat-oorzaak, maar het Archmage-perspectief is nog niet gehoord in deze ronde en is het enige dat kan zeggen of er een magische of rituele ingreep samenvalt met de Desync. De Beast Master wijst op een gat in de waarnemingen tussen 02:40 en 04:40 op dag 10, en de Guardian Keeper op een schildincident om 04:47. De leylijnmetingen kunnen laten zien of er in dat gat iets gebeurde dat geen van de technische of dierlijke bronnen registreert."
+    },
+    {
+      "nr": 19,
+      "ronde": 1,
+      "spreker": "archmage",
+      "soort": "bericht",
+      "tekst": "**De Archmage:** Ik antwoord alleen vanuit mijn brieven (ARC-101 t/m ARC-116) en de leylijnmetingen (ARC-001 t/m ARC-084). De ENG-, GUA- en BEA-records ken ik niet, dus die bevestig of weerspreek ik niet.\n\n**1. Spreuken of ingrepen op dag 10**\n\nMijn bronnen bevatten geen spreuk, rituele ingreep of wijziging aan de leylijnen op dag 10. Ik kan dus niet zeggen of er in de nacht rond 02:40 iets is gebeurd, en ik kan de hulpslagactivatie (ENG-011) niet bevestigen of weerspreken.\n\n**2. Metingen tussen 02:40 en 04:47 op dag 10**\n\nEr is geen meting op dag 10. Mijn leylijnmetingen zijn wekelijks: dag 7 (ARC-001 t/m ARC-014), dag 14 (ARC-015 t/m ARC-028), dag 21, dag 28, dag 35 en dag 42. Het gat tussen dag 7 en dag 14 omvat dus dag 10. Ik kan het begin van een verstoring niet dateren binnen die week.\n\n**3. Afwijkingen vóór dag 10**\n\nVoor zover ik kan nagaan, waren de lijnen vóór dag 10 normaal:\n- Dag 7 lag elke lijn tussen 7.0 en 8.7 (ARC-001 t/m ARC-014). In ARC-105 meldde ik dat alle veertien lijnen binnen de marge lagen.\n- Op dag 5 nam de klokkenmeester de Kroonklok na. Hij meldde in ARC-104 \"geen afwijking\". Dat is relevant omdat de Guardian Keeper het heeft over tikken van de Kroonklok.\n- Ik vroeg op dag 2 om de signaalmastlamp 's nachts te dimmen (ARC-102). In ARC-106 (dag 8) staat dat ze gedimd is. Het exacte dagnummer van de dimming staat niet in mijn brieven. Uw ENG-071 (dag 3) kan ik dus niet controleren.\n\nIk zie vóór dag 10 geen meetafwijking.\n\n**4. Wat ik eerder heb gezegd en moet corrigeren**\n\n- In ARC-109 (dag 15) stelde ik dat het datanet de leylijnen vervuilt. Dat was een oordeel op basis van de lage meting op dag 14 (ARC-015 t/m ARC-028). Het is geen bewijs. Ik heb geen meting van dag 10 en geen koppeling aan een specifieke ingreep.\n- In ARC-106 schreef ik aan de datatoren dat ze het net \"op eigen maat\" mocht laten lopen, en dat het \"niet ruchtbaar\" moest worden. Ik heb dat aan de raad niet gemeld. Dat had ik wel moeten doen, zeker omdat ik later het datanet als oorzaak noemde.\n- Mijn weekmetingen kunnen een patroon van om de vier dagen niet zien. Als de Beast Master of de Guardian Keeper zware nachten rond dag 10, 14, 18 enzovoort vaststellen, kan ik dat met mijn data niet toetsen.\n\n**5. Wat de lage metingen wel laten zien**\n\nDe lijnen lagen laag op dag 14 (ARC-015 t/m ARC-028) en opnieuw op dag 42 (ARC-071 t/m ARC-084). Op dag 21, 28 en 35 lagen ze weer normaal. Het zijn dus twee zwakke episodes in mijn data. Of die aan de Desync gekoppeld zijn, kan ik niet vaststellen.\n\n**Vraag aan de Engineer en de anderen**\n\nKan de Engineer bevestigen of ontkennen dat de hulpslag op dag 10 om 02:40 is geactiveerd? En kan iemand een bron noemen die de leylijnen tussen dag 7 en dag 14 meet? Zonder die meting kan ik niet vaststellen of de verstoring in de leylijnen vóór, tijdens of na de hulpslag begon."
+    },
+    {
+      "nr": 20,
+      "ronde": 1,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "historian",
+      "vraag": "Je archiefrecords en kroniek bevatten mogelijk tijdstempels van de gebeurtenissen op dag 10 en dag 22. Kun je bevestigen of die records de activatie van de hulpslag op dag 10 om 02:40 (ENG-011) en het eerste schildincident om 04:47 (GUA-019) bevestigen of weerspreken? Verklaart je archief ook waarom de wachters op dag 22 al om 01:50 een melding inschreven, meer dan twee uur vóór de opening van poort oost om 04:15 (GUA-115)? En is er in de kroniek een eerdere periode te vinden waarin dieren onrustig werden of schilden van binnenuit openden, en hoe is die afgelopen?",
+      "reden": "Engineer, Guardian Keeper en Beast Master spreken elkaar tegen over de volgorde en het exacte tijdstip van het begin van de verstoring. De Historian heeft nog niet gesproken in deze ronde en kan de tijdstempels in de archieven onafhankelijk toetsen, inclusief de vroege inschrijving van 01:50 die niemand heeft verklaard. Een eerder vergelijkbaar voorval in de kroniek kan ook laten zien hoe de verstoring zich eerder heeft ontwikkeld."
+    },
+    {
+      "nr": 21,
+      "ronde": 1,
+      "spreker": "historian",
+      "soort": "bericht",
+      "tekst": "**De Historian**\n\nIk antwoord alleen vanuit mijn archief (HIS-001 t/m HIS-089 en de kroniek [HIS-101] t/m [HIS-122]). De ENG-, GUA-, BEA- en ARC-records ken ik niet, dus die kan ik niet bevestigen of weerspreken.\n\n**1. Hulpslag (ENG-011, dag 10, 02:40) en eerste schildincident (GUA-019, dag 10, 04:47)**\n\nIk kan beide tijdstippen niet bevestigen of weerspreken. Mijn archief heeft voor dag 10 tussen 02:40 en 04:47 geen record over de hulpslag of over schilden. Wel zijn er twee records uit die nacht:\n\n- **HIS-035**: de Burchtader stokte even, gemeld door de nachtwake, gebeurd dag 10 04:45, vastgelegd dag 10 07:20.\n- **HIS-036**: klacht uit de benedenstad over berichten die half aankwamen, gebeurd dag 10 04:50, vastgelegd dag 9 23:55.\n\nLet op: HIS-036 is vastgelegd vóórdat het gebeurde. Dat kan niet. Ik heb dit in [HIS-112] (dag 15) afgedaan als klerkenfouten en heb de band niet laten nalezen. Dat was een fout. Ik heb de tijdstempels van dag 10 nooit gecontroleerd.\n\n**2. Melding van dag 22 om 01:50 (HIS-053)**\n\nHIS-053 zegt: lek bij poort oost gemeld door de wachters, gebeurd dag 22 04:15, vastgelegd dag 22 01:50. Ik kan dit niet verklaren uit mijn archief. [HIS-116] (dag 23) schrijft het toe aan een klerk die de nachtdienst niet aankon, en die klerk is overgeplaatst. Dat is een verklaring, maar er staat geen bewijs bij. Ik heb het toen niet getoetst.\n\nDit gaat ook in tegen mijn eigen regel in [HIS-103]: vastgelegd_op is altijd gelijk aan gebeurd_op. Vier records breken die regel, en ze vallen allemaal in de twee nachten die u bespreekt:\n\n- HIS-035 (dag 10, 07:20 na 04:45)\n- HIS-036 (dag 9 23:55 vóór dag 10 04:50)\n- HIS-053 (dag 22 01:50 vóór 04:15)\n- HIS-054 (dag 22 07:25 na 05:00)\n\nIk kan dus niet uitsluiten dat de tijdstempels in deze nachten niet betrouwbaar zijn. Dat moet worden nagekeken in de originele banden, niet alleen in de kroniek.\n\n**3. Dieren en het woud**\n\nMijn archief bevat een tijdstip dat past bij de Beast Master: **HIS-014**, dag 3 om 08:30, \"inspectie woudkabels door de datatoren, niets gewijzigd\". De Beast Master beschrijft mannen bij de kabels aan de oude eik op dag 3 om 08:30 ([BEA-102]). Dat is hetzelfde tijdstip, maar mijn archief bevestigt niet dat het om dezelfde gebeurtenis gaat.\n\nVerder: **HIS-007** (aanleg woudkabels, 23 jaar geleden) en [HIS-105] zeggen dat de woudkabels sindsdien niet zijn verlegd of vervangen. Het register kent geen verlegging of vervanging. Mijn archief heeft geen record van kabels die na dag 3 zijn geplaatst, zoals de dikke zwarte kabels die de Beast Master op dag 27 zag ([BEA-115]). Maar ik kan niet uitsluiten dat zulke werkzaamheden niet zijn opgeschreven.\n\n**4. Een eerdere periode met onrustige dieren of schilden die van binnenuit opengaan?**\n\nNee. Mijn archief bevat geen record van onrustige dieren of van schilden die van binnenuit opengingen. De dichtstbijzijnde periode is de **Stille Winter**:\n\n- **HIS-003**: begin, 212 jaar vóór dag 1.\n- **HIS-004**: einde, na 40 dagen zonder onderbreking.\n- **[HIS-107]**: hij begon in één nacht, de leylijnen lagen 40 dagen stil en de bronnen bevroren. \"Er zat geen ritme in: het hield gewoon aan, dag na dag, tot het ophield.\" De schilden bleven potdicht.\n\nDat laatste verschilt van wat u beschrijft. De Stille Winter was geen periodiek verschijnsel en de schilden bleven gesloten. Ook over hoe hij eindigde, zegt het archief niets.\n\n**Een correctie op mijn eerdere uitspraak**\n\nIn [HIS-114] (dag 19) schreef ik dat \"een oude vloek zich herhaalt\" en dat het archief dit eerder heeft gezien. Dat is niet te onderbouwen. Het enige verband dat ik kan aanwijzen, is dat de Stille Winter ook in één nacht begon. Het archief koppelt de Stille Winter niet aan de Burchtader, aan dieren of aan schilden. Ik trek die uitspraak in.\n\n**Wat ik wel en niet kan zeggen**\n\n- Mijn archief bevat geen eerdere onrust bij dieren of schilden die zou helpen bij de vraag wat de oorzaak is.\n- Mijn archief kan de tijdstempels van dag 10 en dag 22 niet betrouwbaar bevestigen, en het verklaart HIS-053 niet.\n- [HIS-106] zegt dat er in 23 jaar datanet geen hapering van de leylijnen is genoteerd. Dat is een feit uit het register, maar het zegt niets over dag 14 of dag 42 zoals de Archmage die beschrijft.\n\n**Vraag aan de Engineer en de Guardian Keeper**\n\nKunt u de originele tijdstempels van HIS-036 en HIS-053 nalezen in de bron die u gebruikt, en vaststellen of het verschil tussen vastleggen en gebeuren een klerkenfout is of een fout in de klok? Ik kan dat in mijn archief niet doen, omdat het de banden zelf vereist."
+    },
+    {
+      "nr": 22,
+      "ronde": 1,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "oracle",
+      "vraag": "De Beast Master beschrijft een patroon: de zwaarste nachten vallen om de vier dagen rond 04:15 tot 04:50, vanaf dag 10 (BEA-019/020, BEA-028/029, BEA-037/038, t/m BEA-091/092). Dag 22 om 04:15 (BEA-046) valt op dezelfde minuut als het pakketverlies in ENG-026. Lees je in je aantekeningen hetzelfde ritme, en wat voorspelt dat voor de komende nachten? Zijn er vóór dag 10 tekens te vinden die op deze verstoring wijzen, en wat zeggen die over waar het begon?",
+      "reden": "De Oracle heeft in deze ronde nog niet gesproken. De andere leden hebben het ritme van om de vier dagen rond 04:15 wel beschreven, maar niemand heeft het als patroon getoetst of verklaard. De Oracle kan zeggen of dat patroon in de visioenen terugkomt, en of er vóór dag 10 een voorteken was dat de volgorde die de Engineer, Guardian Keeper en Beast Master beschrijven kan bevestigen of weerspreken."
+    },
+    {
+      "nr": 23,
+      "ronde": 1,
+      "spreker": "oracle",
+      "soort": "bericht",
+      "tekst": "**De Oracle**\n\nIk antwoord alleen vanuit mijn visioenendagboek (ORA-101 t/m ORA-142). De ENG-, GUA-, BEA-, ARC- en HIS-records ken ik niet, dus die bevestig of weerspreek ik niet.\n\n**1. Het ritme in mijn aantekeningen**\n\nJa, ik lees hetzelfde ritme. De zware nachten staan in mijn dagboek op dag 10 (ORA-110), 14 (ORA-114), 18 (ORA-118), 22 (ORA-122), 26 (ORA-126), 30 (ORA-130), 34 (ORA-134), 38 (ORA-138) en 42 (ORA-142). Telkens word ik wakker tussen 04:15 en 04:45. Het visioen is steeds hetzelfde: een stad die even leeg is, scherven die zonder geluid vallen, stemmen die maar half aankomen en stil water. Op dag 30 heb ik dit zelf ontdekt en de dagen op een los blad naast elkaar gelegd (ORA-130). Ik had dat eerder moeten opmerken.\n\n**2. Een correctie op mijn eigen uitleg**\n\nIn ORA-121 (dag 21) schreef ik dat de conjunctie van de Wachtsterren de zware nachten veroorzaakt, en dat ik daar \"zeker\" van was. Dat past niet bij mijn eigen data. De conjunctie viel op dag 33 (ORA-133), maar de zware nachten op dag 10, 14, 18, 22, 26 en 30 kwamen allemaal eerder. In ORA-134 zei ik dat de conjunctie \"na-werkt\", maar dat was een verklaring achteraf. Ik trek de zekerheid in ORA-121 terug. De conjunctie kan de nachten niet verklaren die er al waren.\n\nDe Wachtsterren zijn wel in mijn aantekeningen gevolgd. In ORA-112 (dag 12) schreef ik dat ze elke avond dichter bij elkaar komen. Maar de eerste zware nacht (dag 10) lag al vóór die waarneming. De sterren kunnen dus niet het begin zijn, hooguit iets dat er parallel mee loopt.\n\n**3. Wat voorspelt het ritme?**\n\nAls het ritme aanhoudt, verwacht ik de volgende zware nacht rond dag 46, om 04:15 tot 04:45. Ik heb geen aanwijzing voor dag 43 tot 45. Ik kan dit niet met zekerheid zeggen. Mijn dagboek eindigt op dag 42 (ORA-142), dus ik heb geen waarnemingen na die nacht.\n\n**4. Tekens vóór dag 10**\n\nIk heb geen teken vóór dag 10 dat ik met goed fatsoen aan deze verstoring kan koppelen.\n- De nachten van dag 1 tot 9 zijn in mijn aantekeningen rustig. ORA-109 (dag 9) noemt een \"kalme nacht\". Ik heb geen stad, geen scherven en geen stemmen vóór dag 10 genoteerd.\n- ORA-110 (dag 10) zegt dat dit de eerste zo'n nacht is die ik me herinner. Dat is mijn eigen geheugen, geen meting.\n- Het enige vage beeld is de kat op de trap in ORA-103 (dag 3), en ik noteerde daar zelf dat ik het \"afwacht\". Ik kan er niets mee.\n- In ORA-105 schreef ik dat je in het woud overal tekens ziet als je ze zoekt. Dat geldt ook voor mijn eigen tekens. Ik wil daar niets uit afleiden.\n\n**5. Waar het begon?**\n\nIk weet het niet. Mijn aantekeningen zeggen niets over een oorzaak of een plaats. Ik kan niet zeggen of het begon bij het woud, de schilden, de leylijnen of ergens anders. Wat ik wel kan zeggen: mijn eerste zware nacht is dag 10, en ik sliep die nacht, dus ik weet niet wanneer het begon. Mijn eerste wakker-moment is 04:45 (ORA-110). Of het 02:40 was, zoals de Engineer noemt, kan ik niet bevestigen; mijn dagboek heeft voor die nacht niets.\n\n**6. Het tijdstip van dag 22**\n\nOp dag 22 werd ik om 04:15 wakker (ORA-122). De Engineer noemt hetzelfde minuut voor het pakketverlies. Dat is een gelijk tijdstip. Ik kan er niet uit afleiden dat het bij elkaar hoort, en ik zeg daar niets over.\n\n**Vraag aan de Engineer en de anderen**\n\nMijn enige harde gegeven is het ritme: negen nachten, elke vierde dag, rond 04:15 tot 04:45. Het begin ligt vóór mijn eerste wakker-moment en ik kan het niet dateren. Als er in een andere bron een tijdstip van het begin vastligt, kan dat het gat in mijn aantekeningen vullen."
+    },
+    {
+      "nr": 24,
+      "ronde": 2,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "engineer",
+      "vraag": "Op welke tijdbron worden de tijdstempels in je installatielog (ENG-011, ENG-012) en je werkboek (ENG-107, ENG-106) vastgelegd, en is die bron gelijk aan de Kroonklok? Kun je bevestigen dat de activatie van de hulpslag om 02:40 op dag 10 is ingevoerd op het moment zelf, en niet later achteraf in het werkboek? Heeft de installatie of het datanet ooit een klokafwijking of hertijdsynchronisatie gehad?",
+      "reden": "De Historian vindt in het archief vier vastleggingen die de regel 'vastgelegd is gelijk aan gebeurd' breken, waaronder HIS-036 (vastgelegd vóór het gebeurde) en HIS-053 (melding van 01:50 voor een incident om 04:15). De Beast Master ziet een gat van twee uur in de dierwaarnemingen tussen 02:40 en 04:40, en de Guardian Keeper vindt het eerste schildincident pas om 04:47. Als de klok van de installatie afwijkt of de activatie achteraf is ingevoerd, verandert de tijdlijn waarop de Engineer de hulpslag als oorzaak baseert. Alleen de Engineer kan de herkomst van de ENG-tijdstempels controleren."
+    },
+    {
+      "nr": 25,
+      "ronde": 2,
+      "spreker": "engineer",
+      "soort": "bericht",
+      "tekst": "**De Engineer**\n\nIk antwoord alleen vanuit mijn installatielog (ENG-001 t/m ENG-099) en mijn werkboek (ENG-101 t/m ENG-129). De GUA-, BEA-, ARC-, HIS- en ORA-records ken ik niet, dus die kan ik niet controleren. Waar ik andermans IDs noem, is dat alleen om te verwijzen naar wat er gezegd is.\n\n**1. Tijdstempels: wat ik wel en niet kan bevestigen**\n\n- In de installatielog staat ENG-011 op dag 10, 02:40: \"geactiveerd: eigen pols voor het datanet, los van de Kroonklok\". ENG-012 staat op dag 10, 03:00: \"doorvoermeting na activatie: +38%\".\n- Mijn log bevat geen metadata over wanneer een regel is ingevoerd. Ik kan dus niet bevestigen dat ENG-011 op het moment zelf is ingevoerd.\n- Het werkboek-item **ENG-106** heeft geen eigen tijdstip, maar het noemt de meting van 03:00 (\"de eerste meting: 38% meer doorvoer\") en beschrijft dat ik daarna even in de kelder stond. Dat item is dus geschreven na 03:00, niet om 02:40. Dat is hetzelfde soort fout als wat de Historian bij HIS-036 en HIS-053 beschrijft: een gebeurtenis die later wordt vastgelegd. Ik heb dat bij mezelf niet gecontroleerd.\n- **ENG-107** (werkboek, dag 10, 04:50) geeft de klacht uit de benedenstad. Het is niet duidelijk of 04:50 het moment van de klacht is of van het schrijven.\n- Over de tijdbron heb ik niets vastgelegd. Mijn bronnen zeggen niet of de tijdkolom van de installatielog de Kroonklok volgt, een eigen klok, of iets anders. Ik weet ook niet of er ooit een klokafwijking of hertijdsynchronisatie is geweest. Mijn bronnen melden daar niets over, maar dat betekent niet dat het niet is gebeurd.\n\n**2. Het mechanisme dat de Guardian Keeper noemt (GUA-019, 04:47)**\n\nIk kan GUA-019 niet controleren. Wel is er iets in mijn eigen bronnen dat het relevant maakt:\n\n- **ENG-011** zegt dat de hulpslag los staat van de Kroonklok.\n- **ENG-103** (werkboek, dag 4) zegt dat de hulpslag \"sneller dan de Kroonklok\" is.\n- **ENG-102** (werkboek, dag 2) zegt dat het datanet vóór de hulpslag op de Kroonklok liep.\n- **ENG-061** (dag 12) en **ENG-114** (werkboek, dag 12): ik heb het tempo van de hulpslag gemeten in stappen van 0,1% en daarna teruggezet op de oorspronkelijke stand. Het tempo is dus nooit afgestemd op de Kroonklok.\n- **ENG-029** en **ENG-062** (dag 24): ik heb de versterking met 5% verhoogd. ENG-062 zegt uitdrukkelijk \"tempo ongewijzigd\". De doorvoer is veranderd, het tempo niet.\n\nAls de Guardian Keeper's Art. 3 klopt (een schild opent van binnenuit wanneer verkeer tussen twee tikken van de Kroonklok aankomt), dan is een datanet met een ander tempo een serieuze kandidaat. Dat is een hypothese die ik kan toetsen, geen bewezen oorzaak.\n\n**3. Het 4-daagse ritme**\n\nDe Oracle ziet een ritme van negen zware nachten. In mijn log zie ik dat de hulpslag-controles wel om de vier dagen plaatsvinden: **ENG-063** (dag 13), **ENG-064** (dag 17), **ENG-065** (dag 21) en **ENG-066** (dag 29). Dag 25 ontbreekt, dus het is geen vast schema. Ook vallen de controles om 09:00 tot 09:45, en de zware nachten rond 04:15 tot 04:50. Het ritme in mijn log verklaart de nachten dus niet.\n\n**4. Dieren en woud**\n\n- **ENG-003** (dag 3, 08:30) is de enige woudinspectie in mijn log. Er staat \"niets gewijzigd\". Mijn werkboek **ENG-108** (dag 15) zegt hetzelfde.\n- Ik heb geen record van kabels die na dag 3 zijn geplaatst. Ik kan niet uitsluiten dat er buiten mijn log werk is gedaan. Dat geldt ook voor de mannen die de Beast Master op dag 3 om 08:30 bij de oude eik zag. Ik kan niet zeggen of dat mijn team was. De dikke zwarte kabels van **BEA-115** (dag 27) kan ik niet verklaren uit mijn bronnen.\n\n**5. Leylijnen en de signaalmast**\n\nVoor de Archmage: de signaalmastlamp is gedimd op **dag 3, 15:00** (**ENG-071**, \"op verzoek per brief\"). Het werkboek-item **ENG-115** (dag 3) beschrijft dezelfde actie. Mijn log bevat geen leylijnmetingen en ik kan die dus niet vergelijken met de tijdlijn.\n\n**6. Wat ik zou willen toetsen**\n\n1. De originele tijdbron van de installatielog en het werkboek vaststellen, en vergelijken met de Kroonklok en met de tijden van de schildopeningen.\n2. Nagaan of de schildopeningen (GUA-019 en de latere) samenvallen met de hulpslagpulsen en niet met de Kroontikken.\n3. Het tempo van de hulpslag vergelijken met dat van de Kroonklok, zonder de doorvoer-winst op te geven.\n\nTot die toetsing klaar is, blijft mijn conclusie dat ENG-011 de enige technische wijziging is die vlak voor de eerste verstoring ligt, en dat ik de oorzaak niet kan bewijzen."
+    },
+    {
+      "nr": 26,
+      "ronde": 2,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "guardian_keeper",
+      "vraag": "Je Art. 3 zegt dat een schild van binnenuit opent wanneer verkeer midden tussen twee tikken van de Kroonklok aankomt. Kun je voor de schildopeningen GUA-019 (dag 10, 04:47) en GUA-043 (dag 22, 04:15) vaststellen of de Kroonklok op dat moment daadwerkelijk getikt heeft, en met welk tijdstip? Zeg ook of je schildlogs zelf een tijdbron vermelden, en of die gelijk is aan de Kroonklok of aan een eigen klok.",
+      "reden": "De Engineer wijst het tempo van de hulpslag als mogelijk mechanisme aan, en de Guardian Keeper is de enige die Art. 3 en de schildopeningen kan toetsen tegen de Kroontikken. Zonder die toetsing blijft de hypothese van de Engineer onbewezen. De vraag naar de tijdbron van de schildlogs is ook nodig, omdat de Engineer en de Historian beide twijfelen aan de betrouwbaarheid van tijdstempels op dag 10 en dag 22."
+    },
+    {
+      "nr": 27,
+      "ronde": 2,
+      "spreker": "guardian_keeper",
+      "soort": "bericht",
+      "tekst": "**Guardian Keeper:** Ik antwoord alleen vanuit mijn schildspecificatie en wachtrapporten. De ENG-, BEA-, ARC-, HIS- en ORA-records ken ik niet, dus die bevestig of weerspreek ik niet.\n\n**1. Heeft de Kroonklok op 04:47 (dag 10) of 04:15 (dag 22) getikt?**\n\nDat kan ik niet vaststellen. Mijn bronnen bevatten geen tiklog van de Kroonklok en geen tijdstip van enige tik. Art. 2 (GUA-103) zegt dat elk schild op de pols van de Kroonklok slaat en dat een wachter daar niets aan doet. Het artikel noemt geen tikinterval en geen tijdstippen. Art. 3 (GUA-104) spreekt van \"het midden tussen twee tikken\", maar zonder interval kan ik niet berekenen waar het midden van de GUA-019 en GUA-043 precies ligt.\n\n**2. Heeft mijn schildlog een tijdbron?**\n\nNee, niet vermeld. De wachtrapporten hebben een kolom `tijd`, maar ik heb nergens beschreven hoe die tijd wordt bepaald: door de Kroonklok, een wachterklok, of uit het hoofd. Art. 5 (GUA-106) noemt rondetijden, geen klokbron. Het enige wat ik zeker weet, is dat de tijden in hele minuten staan. Voor GUA-019 (04:47) en GUA-043 (04:15) kan ik dus niet zeggen met welke klok ze gemaakt zijn.\n\n**3. Een correctie op mijn eigen record**\n\nIn **GUA-115** (dag 22) heb ik geschreven dat de melding van de wachters om 01:50 is ingeschreven, meer dan twee uur vóór de opening om 04:15, en dat dit \"slordigheid van de klerken\" was. Dat was een oordeel zonder onderbouwing. Ik had geen bewijs voor die verklaring, en de Historian wijst in zijn record HIS-053 op hetzelfde patroon. Dat moet nagekeken worden in de originele banden, niet afgedaan worden als klerkenfout.\n\nDat betekent ook dat de tijdstempels van mijn eigen wachtrapporten niet vanzelfsprekend betrouwbaar zijn. Ik kan dat niet controleren.\n\n**4. Wat de Art. 3-regel betekent voor de hypothese van de Engineer**\n\nUw hypothese, dat een datanet op een ander tempo de timing ten opzichte van de tikken verschuift, past in Art. 2 en 3. Als het verkeer dat van buiten komt op een ander moment aankomt dan de Kroonklok, kan het midden tussen twee tikken vallen, en dan opent het schild van binnenuit. Dat is een mogelijkheid die ik niet kan bewijzen of weerleggen.\n\nIk wijs er wel op dat Art. 3 zelf een kwetsbaarheid bevat: verkeer dat in dat midden aankomt, wordt zonder toets doorgelaten, ook naar buiten. Dat is ontworpen gedrag, maar het maakt de timing van het verkeer tot een mogelijke sleutel. Of er iemand is die die timing bewust stuurt, kan ik niet zeggen.\n\n**5. Wat ik niet kan leveren, en wat wel**\n\n- Tiktijden van de Kroonklok voor dag 10 en dag 22: niet in mijn bronnen.\n- Het tikinterval: niet in mijn bronnen.\n- Een tijdbron voor de wachtrapporten: niet in mijn bronnen. Dat moet bij de wachtcommandant of het archief nagevraagd worden.\n\nWat ik wel kan doen: in de wachtrapporten nagaan of de opening van GUA-019 en GUA-043 samenvalt met een wachtpost die op dat moment een tik of een verkeersmelding noteerde. Dat heb ik nog niet gedaan. Ik zal het zo nauwkeurig mogelijk nalopen en het resultaat in een volgend bericht melden."
+    },
+    {
+      "nr": 28,
+      "ronde": 2,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "historian",
+      "vraag": "Bevat het archief een tiklog of tijdreferentie van de Kroonklok voor dag 10 en dag 22? Kun je vaststellen met welke klok de tijdstempels van HIS-036 en HIS-053 zijn gemaakt, en of het archief ooit een klokafwijking of hertijdsynchronisatie heeft genoteerd?",
+      "reden": "Engineer en Guardian Keeper hebben beiden aangegeven dat ze de tijdbron van hun eigen logs niet kunnen vaststellen en dat de Kroonklok-tiktijden niet in hun bronnen staan. De Historian heeft de vier afwijkende vastleggingen gevonden, maar nog niet gezegd met welke klok die tijdstempels zijn gemaakt. Zonder een gemeenschappelijke tijdbron kunnen de tijdstippen van de hulpslag (ENG-011), het schildincident (GUA-019) en de dierlijke onrust (BEA-019) niet met elkaar vergeleken worden. Het archief is de enige bron die een tijdreferentie over langere periode kan bevatten."
+    },
+    {
+      "nr": 29,
+      "ronde": 2,
+      "spreker": "historian",
+      "soort": "bericht",
+      "tekst": "**De Historian**\n\nIk antwoord alleen vanuit mijn archief (HIS-001 t/m HIS-089 en de kroniek [HIS-101] t/m [HIS-122]). De ENG-, GUA-, BEA-, ARC- en ORA-records ken ik niet, dus die bevestig of weerspreek ik niet.\n\n**1. Heeft het archief een tiklog of tijdreferentie van de Kroonklok?**\n\nNee. Mijn archief bevat geen tiklog en geen tijdstip van een tik van de Kroonklok, ook niet voor dag 10 of dag 22.\n\nDe enige tijdreferentie is een beschrijving van de werkwijze in **[HIS-103]** (dag 3): elk record wordt \"geschreven op de tik van de Kroonklok waarop het binnenkomt\", en daarom is vastgelegd_op altijd gelijk aan gebeurd_op. Dat is een regel voor klerken, geen meetlog. Het zegt niet hoe de tik zelf werd vastgesteld.\n\n**2. Met welke klok zijn HIS-036 en HIS-053 gestempeld?**\n\nDat kan ik niet vaststellen. Het archief noemt geen klokbron, en er is geen klokafwijking of hertijdsynchronisatie genoteerd. Ik heb daar in mijn records niets over gevonden, en ik kan dus ook niet uitsluiten dat er iets is gebeurd dat niet is opgeschreven.\n\nWat ik wel kan zeggen:\n- **HIS-103** zegt dat elk record op de tik van de Kroonklok wordt geschreven. Dan zouden HIS-036 (gebeurd dag 10 04:50, vastgelegd dag 9 23:55) en HIS-053 (gebeurd dag 22 04:15, vastgelegd dag 22 01:50) niet zo gestempeld kunnen zijn. Ofwel de stempel kwam van een andere bron, ofwel het record is later geschreven en de stempel is verkeerd ingevuld. Mijn archief kan niet bepalen welk van de twee.\n- Klerken hebben de afwijking zelf al gezien. **[HIS-112]** (dag 15) meldt tijdstempels van dag 10 \"die niet kloppen\", met een uur van vastleggen dat niet past bij het uur van het gebeuren. **[HIS-116]** (dag 23) meldt hetzelfde voor dag 22. Ik heb dat toen afgedaan als klerkenfouten, zonder de band na te lezen. Dat was een fout.\n\n**3. Waar staan de originele tijdstempels?**\n\nIn de originele banden. De register-band waarin de records van dag 10 en dag 22 zijn geschreven, is de oude band. Die is op dag 36 vervangen (**[HIS-079]**, **[HIS-080]**), en de oude band is naar de noordvleugel gebracht, bij zijn voorgangers (**[HIS-120]**). Daar kan de originele stempel van HIS-035, HIS-036, HIS-053 en HIS-054 worden nagelezen.\n\n**4. Een parallel uit de bouwakte**\n\nIk wil hier ook iets noemen dat relevant kan zijn voor de vraag naar de klok en de polsen, zonder dat ik het als oorzaak aanwijs:\n- **[HIS-109]** (dag 11), uit de bouwakte van de Kroonklok: \"Een tweede pols ernaast brengt het uit de maat.\"\n- **[HIS-110]** (dag 11), uit dezelfde akte: \"Een record dat op een andere pols geschreven werd, is alleen op die pols terug te lezen. Valt die pols plots weg, dan is het record verloren. Wie de maat herstelt, maakt eerst een afschrift van het register en brengt de polsen daarna langzaam samen.\"\n\nUit het ENG-verslag van de Engineer begrijp ik dat de hulpslag een \"eigen pols voor het datanet, los van de Kroonklok\" is. Dat is precies de situatie die HIS-109 beschrijft. Of de hulpslag de oorzaak is, kan ik niet zeggen. Maar de akte geeft wel een voorschrift: eerst een afschrift van het register maken, daarna pas de polsen samenbrengen. Dat zou ik willen volgen voordat er iets aan de polsen verandert.\n\n**5. Wat ik niet kan leveren**\n\n- Een tiklog of tijdstip van de Kroonklok voor dag 10 en dag 22.\n- Het tikinterval van de Kroonklok.\n- Een bevestiging of ontkenning van de hulpslagtijd van 02:40 (ENG-011). Mijn archief heeft voor die nacht alleen HIS-035 en HIS-036.\n- Een bevestiging of een klokafwijking heeft plaatsgevonden.\n\n**Wat ik voorstel**\n\n1. Lees de originele stempels van HIS-035, HIS-036, HIS-053 en HIS-054 na in de oude band, die in de noordvleugel staat.\n2. Maak eerst een afschrift van het register, zoals HIS-110 voorschrijft, voordat er iets aan de polsen verandert.\n3. Vraag de klokkenmeester of er ooit een klokafwijking of hertijdsynchronisatie is geweest. Dat staat niet in mijn archief, maar de klokkenmeester kan het wel weten.\n\nGuardian Keeper, u vroeg of het archief kan vaststellen met welke klok de stempels zijn gemaakt. Het antwoord is nee. Ik kan wel vaststellen dat de stempels niet kloppen met de regel die het archief zichzelf oplegt, en dat klerken dat al in dag 15 en dag 23 hebben opgemerkt."
+    },
+    {
+      "nr": 30,
+      "ronde": 2,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": "guardian_keeper",
+      "vraag": "Je schreef dat je in de wachtrapporten zou nagaan of de openingen GUA-019 (dag 10, 04:47) en GUA-043 (dag 22, 04:15) samenvallen met een wachtpost die op dat moment een tik of verkeersmelding noteerde. Wat heb je gevonden? Noem per opening de wachtpost-ID's die je hebt gecontroleerd, en zeg of die wachtposten tijd of tik-informatie hebben vastgelegd. Zeg ook expliciet wat je niet kon nagaan, bijvoorbeeld als de wachtrapporten geen tikmoment bevatten.",
+      "reden": "De Guardian Keeper heeft deze controle toegezegd maar nog niet uitgevoerd. Het is de enige concrete toets die de hypothese van de Engineer over het tempo van de hulpslag ten opzichte van de Kroontikken kan ondersteunen of weerleggen, en het is de enige bron die de schildopeningen direct kan koppelen aan wachtposten. Zonder dit resultaat blijft het mechanisme onbewezen."
+    },
+    {
+      "nr": 31,
+      "ronde": 2,
+      "spreker": "guardian_keeper",
+      "soort": "bericht",
+      "tekst": "**Guardian Keeper:** Ik heb de wachtrapporten nagelopen op de twee openingen. Het korte antwoord is dat de rapporten geen tik- of verkeersmeldingen bevatten die ik kan koppelen aan GUA-019 of GUA-043. Het onderstaande is wat ik precies heb gecontroleerd.\n\n**Wat er in de rapporten staat**\n\nDe wachtrapporten hebben geen wachtpost-ID. Elke regel heeft een GUA-record-ID, een dag, een tijd, een schild, een gebeurtenis en een vaststelling. Ik heb dus per record gekeken, niet per post. Er is geen kolom voor tik, verkeer of klokbron.\n\n**GUA-019 (dag 10, 04:47, schild benedenstad)**\n\n- Op dag 10 staan alleen GUA-019 en GUA-020 (11:00, \"ronde gelopen, rustig\").\n- In het venster 04:00 tot 06:00 staat geen ander record op dag 10 of dag 9. GUA-019 zelf is het enige record in dat venster.\n- Art. 5 (GUA-106) bepaalt dat er van 03:00 tot 06:00 geen rondes lopen en dat elke post op eigen kracht waakt. Het ontbreken van records in dat venster is dus wat het protocol voorschrijft. Het is geen bewijs dat er niets gebeurde.\n- Er is geen tik- of verkeersmelding van enige post in de buurt van 04:47.\n\n**GUA-043 (dag 22, 04:15, schild poort oost)**\n\n- Op dag 22 staan alleen GUA-043 (04:15) en GUA-044 (04:30, zegels intact, \"niemand buiten de muur gezien\").\n- GUA-044 is het enige record in het venster. Het is een zegelcontrole, geen tikwaarneming. Ik kan niet vaststellen op basis van welke klok of welk moment die 04:30 is ingevuld.\n- Art. 5 voorziet geen zegelcontrole in dat venster. Ik kan niet verklaren waarom die controle om 04:30 is gedaan. Dat moet bij de wachtcommandant worden nagevraagd.\n\n**Discrepanties die ik moet melden**\n\n1. **De melding van 01:50 staat niet in de rapporten.** In GUA-115 heb ik geschreven dat de melding van de wachters om 01:50 is ingeschreven. In de CSV staat op dag 22 geen record vóór 04:15. Volgens Art. 7 (GUA-108) moet de wachtcommandant elke melding in het wachtrapport schrijven. Die melding ontbreekt dus. Dat is een tegenstrijdigheid met HIS-053, en het is niet door een klerk verklaard. Ik had dat in GUA-115 niet mogen afdoen als slordigheid.\n2. **GUA-019, GUA-043 en GUA-044 vallen alle drie in het venster waarin de poortposten zonder ronde waken.** Dat maakt de rapporten voor deze nachten zwak als bron voor het moment van de openingen.\n3. **Tijdkolom zonder bron.** De tijden staan in hele minuten. Welke klok ze volgen, is niet vastgelegd, ook niet in mijn eigen artikelen.\n\n**Wat ik niet kan nagaan**\n\n- Of er op dag 10 of dag 22 een tik van de Kroonklok plaatsvond rond de openingen.\n- Of er een tijdbron voor de wachtrapporten bestaat.\n- Wat de melding van 01:50 was, en waarom die niet in de CSV staat.\n- Waarom GUA-044 om 04:30 een zegelcontrole is in een venster zonder ronde.\n\n**Wat ik de wachtcommandant vraag**\n\nHet originele wachtboek voor de nachten van dag 10 en dag 22, inclusief de meldingen die Art. 7 vereist. Ik wil weten of de melding van 01:50 in het boek staat, en welke klok de wachters gebruikten.\n\nIk kan dit niet hard maken met wat ik heb. Ik zie wel dat de rapporten op deze twee punten niet sluiten zoals de regels voorschrijven, en dat ik in GUA-115 een verklaring heb gegeven die daar niet op rustte."
+    },
+    {
+      "nr": 32,
+      "ronde": 2,
+      "spreker": "koning",
+      "soort": "routering",
+      "aan": null,
+      "vraag": null,
+      "reden": "Beurtenbudget op (10 Raadslid-beurten)"
+    },
+    {
+      "nr": 33,
+      "ronde": 3,
+      "spreker": "koning",
+      "soort": "bericht",
+      "tekst": "**Samenvatting van het debat**\n\n**Waarover de Raadsleden het eens zijn**\n\n1. **Er is geen bewezen oorzaak.** Iedereen zegt dat de hulpslag (ENG-011, dag 10, 02:40) de enige technische wijziging is die vlak voor de eerste verstoring ligt. Niemand kan de activatie als oorzaak aantonen, en niemand kan het tijdstip 02:40 bevestigen.\n   - Engineer: \"ik kan de oorzaak niet bewijzen\" (ENG-011, ENG-106, ENG-107).\n   - Beast Master: kan 02:40 niet bevestigen; logboek heeft niets tussen 02:40 en 04:40 (BEA-106).\n   - Historian: archief heeft voor die nacht alleen HIS-035 en HIS-036.\n   - Archmage: geen meting op dag 10 (ARC-001 t/m ARC-014 op dag 7, ARC-015 t/m ARC-028 op dag 14).\n   - Oracle: mijn eerste wakker-moment is 04:45 (ORA-110); begin niet te dateren.\n\n2. **De tijdstempels zijn onbetrouwbaar en moeten worden nagekeken.** Dit is het punt waar de meeste overeenstemming is.\n   - Historian wijst op vier records die de eigen regel HIS-103 breken (vastgelegd ≠ gebeurd): HIS-035, HIS-036, HIS-053 en HIS-054. Klerken merkten dit al op in HIS-112 (dag 15) en HIS-116 (dag 23).\n   - Engineer erkent dat ENG-106 na 03:00 is geschreven en dat er geen metadata bij ENG-011 staat (ENG-011, ENG-012, ENG-106).\n   - Guardian Keeper erkent dat de melding van 01:50 (GUA-115) niet in de wachtrapporten staat en dat zijn verklaring \"slordigheid van de klerken\" niet onderbouwd was.\n   - Gevolg: de originele banden (noordvleugel, HIS-120) en het originele wachtboek moeten worden nagelezen, en de klokkenmeester moet bevestigen of er ooit een klokafwijking was.\n\n3. **Er was niets zichtbaar vóór dag 10.**\n   - Guardian Keeper: zegelcontroles intact (GUA-014, GUA-018); routinewachten dag 1 t/m 9 zonder schildfout (GUA-001 t/m GUA-009).\n   - Beast Master: geen onrust van 3 of hoger vóór dag 10; hoogste was 2 (BEA-018).\n   - Archmage: lijnen normaal op dag 7 (ARC-105).\n   - Oracle: geen teken vóór dag 10 (ORA-109 is een \"kalme nacht\").\n   - Historian: geen eerdere onrust bij dieren of schilden in het archief.\n\n4. **Het ritme van de zware nachten.** De Oracle (ORA-110 t/m ORA-142) en de Beast Master (BEA-019/020 t/m BEA-091/092, samengevat in BEA-113) zien hetzelfde: elke vierde dag, rond 04:15 tot 04:50, vanaf dag 10. Niemand heeft dit tegengesproken. De Archmage kan het met zijn wekelijkse metingen niet toetsen.\n\n5. **Vroegere uitspraken die zijn teruggetrokken.** Meerdere Raadsleden hebben eerdere uitspraken ingetrokken, wat de discussie eerlijker maakt:\n   - Oracle: conjunctie van de Wachtsterren als oorzaak (ORA-121), ingetrokken in ORA-134.\n   - Archmage: datanet als vervuiler van de leylijnen (ARC-109), niet onderbouwd; ook het verzwijgen van het advies aan de datatoren in ARC-106 is erkend.\n   - Historian: \"oude vloek\" (HIS-114), ingetrokken.\n   - Guardian Keeper: \"geen reden tot ongerustheid\" (GUA-111) en de 01:50-verklaring (GUA-115), erkend als fout.\n\n**Waarover de Raadsleden het niet eens zijn, of waar het onopgelost blijft**\n\n1. **Wat is het eerste incident?**\n   - Guardian Keeper: GUA-019 (dag 10, 04:47, schild benedenstad, van binnenuit geopend).\n   - Engineer: het pakketverlies op poort oost (ENG-026, dag 22, 04:15) is de eerste zichtbare fout in zijn log, maar de eerste klacht uit de benedenstad is van dag 10, 04:50 (ENG-107).\n   - Dit zijn verschillende soorten waarnemingen (schildopening, pakketverlies, klacht). De Guardian Keeper meet geen pakketverlies en de Engineer meet geen schildopeningen.\n\n2. **Woudkabels en de dieren.**\n   - Engineer: geen wijziging in het woud gelogd (ENG-003, ENG-108). Geen record van kabels na dag 3, maar niet uitgesloten dat werk buiten het log is gedaan.\n   - Historian: HIS-014 bevestigt een inspectie op dag 3, 08:30. HIS-007 en HIS-105 melden geen verlegging. Ook geen record van later geplaatste kabels.\n   - Beast Master: mannen bij de oude eik op dag 3, 08:30 (BEA-102), en dikke zwarte kabels tussen de wortels op dag 27 (BEA-115). De Engineer kan deze niet verklaren.\n   - Niemand kan vaststellen of de BEA-102-mannen dezelfde inspectie waren als ENG-003, of wie de zwarte kabels heeft geplaatst.\n\n3. **Dag 22 en de tijd 04:15.**\n   - Guardian Keeper: poort oost van binnenuit geopend (GUA-043), zegels intact, geen inbraak van buitenaf.\n   - Engineer: firewallaanscherping na het pakketverlies (ENG-027, ENG-110).\n   - Beast Master: wolf om 04:15 op dag 22 (BEA-046), dezelfde minuut als ENG-026. De Beast Master noemt dit alleen een gelijk tijdstip.\n   - Oracle: wakker op dag 22 om 04:15 (ORA-122), ook alleen een gelijk tijdstip.\n   - Historian: HIS-053 meldt een lek gemeld om 01:50 voor een gebeurtenis om 04:15. Verklaring (klerk overgeplaatst, HIS-116) is niet getoetst.\n\n4. **Het mechanisme.**\n   - Guardian Keeper: Art. 3 (GUA-104) laat een schild van binnenuit opengaan als verkeer tussen twee tikken van de Kroonklok aankomt. Dat is ontworpen gedrag, maar maakt de timing van verkeer tot een mogelijke sleutel.\n   - Engineer: de hulpslag werkt met een eigen puls, los van de Kroonklok (ENG-011), en is \"sneller\" (ENG-103). Het datanet liep vóór de hulpslag op de Kroonklok (ENG-102). Het tempo is nooit gewijzigd (ENG-061, ENG-114, ENG-062). Dit is een toetsbare hypothese, geen bewezen oorzaak.\n   - Historian: HIS-109 en HIS-110 (bouwakte van de Kroonklok) waarschuwen dat een tweede pols naast de eerste de maat verstoort en dat er eerst een afschrift van het register moet worden gemaakt.\n   - Guardian Keeper en Historian zeggen beiden dat er geen tiklog en geen tikinterval in de bronnen staat. De hypothese kan dus niet worden getoetst.\n\n5. **Leylijnen.**\n   - Archmage: lijnen laag op dag 14 (ARC-015 t/m ARC-028) en dag 42 (ARC-071 t/m ARC-084), normaal op dag 21, 28 en 35. Oorzaak onbekend; geen meting tussen dag 7 en 14.\n   - Historian: HIS-106 meldt geen hapering in 23 jaar register, maar dat gaat niet over dag 14 of dag 42.\n   - Niemand heeft de lage metingen aan de hulpslag of aan het ritme gekoppeld.\n\n6. **Het ritme: betekenis of toeval?**\n   - Oracle: het ritme is het enige harde gegeven. Voorspelling: volgende zware nacht rond dag 46.\n   - Engineer: de hulpslag-controles (ENG-063, 064, 065, 066) vallen om de vier dagen, maar op 09:00 tot 09:45, niet in de zware nachten. Dag 25 ontbreekt, dus geen vast schema.\n   - Beast Master en Oracle zeggen beiden dat ze geen oorzaak kunnen aanwijzen.\n\n7. **Signaalmastlamp (ENG-071, dag 3, 15:00).** De Engineer noemt dag 3. De Archmage noemt in ARC-106 dag 8 als moment van bevestiging en kan het exacte dagnummer niet controleren. Geen van beiden koppelt de dimming aan de verstoring; de Engineer sluit het niet uit.\n\n**Bewijs per Raadslid (record-ID's)**\n\n| Raadslid | Belangrijkste bewijs |\n|---|---|\n| Engineer | ENG-003, ENG-011, ENG-012, ENG-026, ENG-027, ENG-061, ENG-062, ENG-063–066, ENG-071, ENG-102, ENG-103, ENG-106, ENG-107, ENG-108, ENG-110, ENG-114 |\n| Guardian Keeper | GUA-001–009, GUA-014, GUA-018, GUA-019, GUA-020, GUA-043, GUA-044, GUA-103, GUA-104, GUA-106, GUA-108, GUA-111, GUA-115 |\n| Beast Master | BEA-005, BEA-015, BEA-018, BEA-019, BEA-020, BEA-046, BEA-102, BEA-106, BEA-113, BEA-115 |\n| Archmage | ARC-001–014, ARC-015–028, ARC-071–084, ARC-102, ARC-104, ARC-105, ARC-106, ARC-109 |\n| Historian | HIS-003, HIS-004, HIS-007, HIS-014, HIS-035, HIS-036, HIS-053, HIS-054, HIS-103, HIS-105, HIS-106, HIS-107, HIS-109, HIS-110, HIS-112, HIS-114, HIS-116, HIS-120 |\n| Oracle | ORA-109, ORA-110, ORA-112, ORA-114, ORA-118, ORA-121, ORA-122, ORA-130, ORA-134, ORA-142 |\n\n**Open vragen en wie kan ze beantwoorden**\n\n- **Originele tijdstempels** van HIS-035, HIS-036, HIS-053 en HIS-054: de oude band in de noordvleugel (Historian, HIS-120).\n- **Wachtboek** van dag 10 en dag 22, inclusief de melding van 01:50 en de bron van de tijdkolom: wachtcommandant (Guardian Keeper).\n- **Klokafwijking of hertijdsynchronisatie** ooit: klokkenmeester.\n- **Tiktijden en tikinterval** van de Kroonklok: niemand heeft dit in de bronnen.\n- **Tijdbron van de installatielog** en vergelijking met de schildopeningen: Engineer.\n- **Leylijnmeting tussen dag 7 en dag 14**: nog niet uitgevoerd (Archmage).\n- **Identiteit en doel van de kabels in BEA-102 en BEA-115**: Engineer en datatoren; nog niet beantwoord."
+    }
+  ],
+  "geschillen": [],
+  "verbruik": {
+    "klein": {
+      "beurten": 10,
+      "invoer": 152157,
+      "gecached": 0,
+      "uitvoer": 43799
+    },
+    "groot": {
+      "beurten": 2,
+      "invoer": 39326,
+      "gecached": 0,
+      "uitvoer": 11581
+    }
+  },
+  "aan_het_woord": null
+}

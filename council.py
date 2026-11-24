@@ -25,7 +25,7 @@ ROLLEN = ("archmage", "engineer", "guardian_keeper", "historian", "oracle", "bea
 BEURTENBUDGET = 10  # spelregel: maximaal 10 Raadslid-beurten (berichten van Raadsleden) per run
 
 
-def kies_volgende(beurten, leden):
+async def kies_volgende(beurten, leden):
     """De Koning leidt het debat: hij beslist wie spreekt. De kit roept deze functie op vóór elke beurt.
     (In AI-termen heet dit deel een orchestrator.)
 
@@ -52,12 +52,25 @@ def kies_volgende(beurten, leden):
       - een agent: de Koning als LLM die het debat leest en (rol, vraag, reden) teruggeeft.
         Meestal sneller gebouwd en slimmer dan regels: zie "Regels of een agent?" in de README.
     """
-    rondes = int(os.getenv("RONDES", "2"))
-    gesproken = sum(1 for b in beurten if b["soort"] == "bericht" and b["spreker"] in ROLLEN)
-    if gesproken >= rondes * len(leden):
-        return None, None, "vaste volgorde: alle rondes gespeeld"
-    lid = leden[gesproken % len(leden)]
-    return lid.ROL, "Geef je inbreng in hoogstens 150 woorden. Reageer op wat de anderen zeiden.", "vaste volgorde"
+    "U bent de koning en leidt een debat. U krijgt een lijst van beurten en een lijst van leden. Op basis van het debat tot nu toe, kies wie nu spreekt, welke vraag die krijgt en waarom. Geef terug: (rol, vraag, reden). Als er genoeg informatie is voor een verdict, stop je het debat. Geef dan None als rol."
+
+    opties = {"reasoning_effort": os.environ["REASONING"]} if os.getenv("REASONING") else None
+    instructies = (
+        "U bent de koning en leidt een debat. U krijgt een lijst van beurten en een lijst van leden. "
+        "Kies wie nu spreekt, welke vraag die krijgt en waarom. "
+        "Als er genoeg informatie is voor een verdict, stop je het debat en geef je rol null. "
+        "Gebruik geen file namen in uw berichten, vraag het lid gewoon over zijn informatie. Bron ID's mogen wel genoemd worden. "
+        'Antwoord alleen met JSON, bv. {"rol": "engineer", "vraag": "...", "reden": "..."}'
+    )
+    bericht = (
+        "Beurten:\n" + json.dumps(beurten, indent=2, ensure_ascii=False)
+        + "\n\nLeden:\n" + json.dumps([{"ROL": l.ROL, "NAAM": l.NAAM, "PERSPECTIEF": l.PERSPECTIEF} for l in leden], indent=2, ensure_ascii=False)
+    )
+    koning = Agent(client("MODEL_GROOT"), instructies, name="koning")
+    r = await koning.run(bericht, options=opties)
+    tekst = r.text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+    keuze = json.loads(tekst)
+    return keuze["rol"], keuze["vraag"], keuze["reden"]
 
 
 def controleer(leden):
@@ -126,6 +139,8 @@ def toolcalls(response):
 
 async def run():
     load_dotenv(ROOT / ".env")
+    (ROOT / "verdict.json").unlink(missing_ok=True)
+    (ROOT / "trace.json").unlink(missing_ok=True)
     opties = {"reasoning_effort": os.environ["REASONING"]} if os.getenv("REASONING") else None  # minder denkwerk = minder tokens
     run_id = f"{datetime.now().astimezone().isoformat(timespec='seconds')}_{uuid.uuid4().hex[:8]}"
     leden = raadsleden.alle()
@@ -170,7 +185,7 @@ async def run():
             if gesproken >= BEURTENBUDGET:
                 rol, vraag, reden = None, None, f"Beurtenbudget op ({BEURTENBUDGET} Raadslid-beurten)"
             else:
-                rol, vraag, reden = kies_volgende(beurten, leden)
+                rol, vraag, reden = await kies_volgende(beurten, leden)
             if rol is not None and rol not in per_rol:
                 sys.exit(f"kies_volgende() koos {rol!r}, maar die Rol zit niet in raadsleden/.")
             if rol is not None:
@@ -206,14 +221,19 @@ async def run():
     beurt(ronde + 1, "koning", "bericht", tekst=r.text)
     print(f"\n[Koning]:\n{r.text}")
 
-    # TODO voor jullie team: laat de Council dit Verdict zelf invullen (zie schema/verdict.json).
-    verdict = {
-        "run_id": run_id,
-        "samenvatting": "TODO",
-        "oorzaak": {slot: {"bewering": None, "bewijs": []} for slot in ("ingreep", "mechanisme", "verloop")},
-        "acties": [{"actie": "TODO", "reden": "TODO"}],
-        "risicos": [{"risico": "TODO", "mitigatie": "TODO"}],
-    }
+        # De Koning schrijft het Verdict op basis van het debat en de samenvatting
+    schema = (ROOT / "schema" / "verdict.json").read_text(encoding="utf-8")
+    verdict_prompt = (
+        "Debat:\n\n" + "\n\n".join(debat)
+        + "\n\nSamenvatting:\n" + r.text
+        + "\n\nSchrijf nu het Verdict van de Council als JSON volgens dit schema:\n" + schema
+        + "\n\nGebruik bij bewijs alleen record-ID's die de Raadsleden echt noemden. Antwoord alleen met JSON."
+    )
+    r = await koning.run(verdict_prompt, options=opties)
+    tel(verbruik, "groot", r.usage_details)
+    tekst = r.text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+    verdict = json.loads(tekst)
+    verdict["run_id"] = run_id
     trace["status"], trace["aan_het_woord"] = "klaar", None
     bewaar("trace.json", trace)
     bewaar("verdict.json", verdict)
