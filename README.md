@@ -1,43 +1,4 @@
-# Council of Achrona: Starter kit
-
-Starter kit voor challenge 113 van Hack The Future 2026, aangeboden door Roboest.
-
-De Desync heeft de herinneringen en systemen van Achrona versnipperd. Jullie bouwen een **Council**: een zwerm van samenwerkende AI-agenten (Raadsleden) die elk één Rol vertolken, debatteren, verspreide kennis analyseren en samen tot een **Council Verdict** komen: wat is de oorzaak, wat is het herstelplan, welke risico's zijn er.
-
-Deze kit geeft jullie binnen het eerste halfuur een draaiende mini-Council die je live in je browser ziet debatteren. Het echte werk is aan jullie: de **Koning** het debat laten leiden. Hij beslist welk Raadslid spreekt, met welke vraag en waarom. (In AI-termen heet dat deel een orchestrator.)
-
-## Wat je krijgt op de dag
-
-| Wat | Wanneer | Waar |
-|---|---|---|
-| Deze repo (GitHub-template) | vooraf | GitHub |
-| LLM-toegang: Teamkaartje met je teamkey voor het Roboest-endpoint ($5 budget, tot 18:00) | 10:00 | coaches |
-| Optioneel: je eigen FreeLLMAPI (gratis, zie "FreeLLMAPI (optioneel)") | vooraf | je laptop |
-| Rolkaarten: perspectief, Belang en Kennisbron per Rol | in deze repo | `rolkaarten.md` |
-| Challenge pack: Kennisbronnen (bestanden) | 10:00 | `https://<mcp-host>/pack.zip` |
-| MCP-server: één pad per Rol, `https://<mcp-host>/<rol>/mcp` | antwoordt vanaf 10:00 (daarvoor geeft `uv run council` een MCP-fout) | in je `.env` |
-| Coaches | de hele dag | in de zaal |
-
-## Vooraf installeren
-
-- Python 3.12 of hoger
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
-- git en een GitHub-account
-- een code-editor
-
-### LLM-toegang
-
-Op de dag krijgt elk team om 10:00 een **Teamkaartje** met een teamkey voor het Roboest-endpoint (`https://roboest.findingsolutions.be/v1`, OpenAI-compatibel). Je kiest er twee modellen mee: `achrona` (klein, voor de Raadsleden) en `achrona-groot` (voor de Koning). Achter die namen wisselt het endpoint zelf tussen providers. De key heeft een budget van $5 en werkt tot 18:00. Je hoeft vooraf niets te installeren.
-
-### FreeLLMAPI (optioneel)
-
-Wil je een back-up als je budget op is, of zelf modellen kiezen? [FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi) bundelt de gratis tiers van veel LLM-providers achter één OpenAI-compatibel endpoint op je eigen laptop.
-
-1. Installeer het: op Windows de desktop-app uit de [Microsoft Store](https://apps.microsoft.com/detail/9PBN6G8K2B7F); op macOS de app uit [Releases](https://github.com/tashfeenahmed/freellmapi/releases/latest); met Docker `curl -fsSL https://freellmapi.co/install.sh | bash`.
-2. Open http://localhost:3001 en voeg op de **Keys**-pagina minstens 2 gratis provider-keys toe (bv. Google AI Studio en Groq). Aanmelden bij een provider vraagt soms een telefoonverificatie: doe dit thuis, niet op de dag.
-3. Zet blok 2 van `.env.example` in je `.env` (in plaats van blok 1) met de **unified key** bovenaan de Keys-pagina.
-
-Maak thuis al je repo aan (stap 1–2 hieronder) en draai daarin `uv sync` (en `uv sync --extra devui` als je de DevUI wil). Dan staat alles al geïnstalleerd en verlies je op de dag geen tijd op de wifi.
+Alles afgewerkt voor 12u, maar had problemen met github en had dit niet op tijd door.
 
 ## Snel starten
 
